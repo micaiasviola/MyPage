@@ -181,7 +181,7 @@ section .header {
 
 .features .card span {
     display: inline-block;
-    background-color: #1e40af;
+    background-color: transparent;
     padding: 2px;
     margin-bottom: 1rem;
     font-size: 1.75rem;
@@ -195,6 +195,7 @@ section .header {
     font-size: 1.2rem;
     font-weight: 600;
 }
+
 
 .features .card p {
     color: #ccc;

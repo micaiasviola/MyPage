@@ -18,8 +18,17 @@ a {
 }
 
 body {
-    font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
-    background-color: #181818;
+    font-family: 'Noto Sans', sans-serif;
+        /* Altera a fonte para a que você importou no HTML */
+        background-color: #0d0d1f;
+        /* Fundo principal bem escuro */
+        background-image: radial-gradient(circle at 50% 10%, #1a1a33, #0d0d1f 70%),
+            radial-gradient(circle at 20% 80%, #2e2e66, transparent 60%),
+            radial-gradient(circle at 80% 80%, #4a2a6b, transparent 60%);
+        background-attachment: fixed;
+        /* Mantém o fundo fixo */
+        color: #e0e0e0;
+        /* Cor de texto mais clara para contraste */
 }
 
 nav {
@@ -90,9 +99,44 @@ nav {
 
 .blur {
     position: absolute;
-    box-shadow: 0 0 1000px 50px #1d4ed8;
-}
-
+    box-shadow: 0 0 1000px 50px #4d2d7f;
+        opacity: 0.5;
+        z-index: -1;
+    }
+        header .blur:nth-of-type(1) {
+            top: -50px;
+            left: -50px;
+            box-shadow: 0 0 1200px 80px #34495e;
+        }
+    
+        /* Card de Habilidades */
+        .features .card,
+        .pricing .card {
+            background-color: rgba(43, 43, 43, 0.3);
+            /* Fundo semi-transparente */
+            backdrop-filter: blur(10px);
+            /* Efeito de vidro embaçado */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            /* Borda sutil */
+            transition: all 0.3s ease;
+        }
+    
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    
+        .features .card:hover,
+        .pricing .card:hover {
+            background-color: rgba(55, 55, 55, 0.5);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-5px);
+            /* Sutil movimento para cima no hover */
+        }
 header {
     position: relative;
     padding-top: 2rem;

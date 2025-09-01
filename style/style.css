@@ -453,3 +453,108 @@ footer .column>a:hover {
         ;
     }
 }
+/* Estilo para a Modal (Janela de Expansão) */
+.modal {
+    display: flex;
+    /* Mantém o flexbox para centralizar */
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+
+    /* Alterações para a animação */
+    visibility: hidden;
+    /* Esconde o elemento mas mantém no layout */
+    opacity: 0;
+    /* Começa com opacidade zero */
+    transition: opacity 0.4s ease-in-out, visibility 0.4s ease-in-out;
+    /* Transição suave */
+}
+
+.modal-content {
+    background-color: rgba(43, 43, 43, 0.5);
+    /* Fundo do modal com glassmorphism */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    position: relative;
+    max-width: 800px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    transform: scale(0.9);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Modal visível com animação */
+.modal.show {
+    visibility: visible;
+    opacity: 1;
+    /* Transiciona a opacidade para 1 */
+}
+
+.modal-content {
+    background-color: rgba(43, 43, 43, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    position: relative;
+    max-width: 800px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+
+    /* Adiciona a animação de escala e movimento */
+    transform: scale(0.8) translateY(20px);
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Estado final da animação de entrada */
+.modal.show .modal-content {
+    transform: scale(1) translateY(0);
+}
+
+.close-btn {
+    color: #fff;
+    font-size: 2rem;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #1d4ed8;
+    /* Cor de destaque ao passar o mouse */
+}
+
+.modal-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.modal-body h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.modal-body p {
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.modal-body .btn {
+    background-color: #1d4ed8;
+    color: #fff;
+    border: none;
+}

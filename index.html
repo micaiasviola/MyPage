@@ -46,52 +46,33 @@
     <section class="container">
         <h2 class="header">About my Skills</h2>
         <div class="features">
-            <div class="card">
-                <a target="_blank" href="https://devdocs.io/c/">C documentation <span><i
-                            class="ri-computer-line"></i></span><i class="ri-arrow-right-line"></i>
-                    <p>"Sou proficiente em C, com foco em estruturas de dados e manipulação de arquivos. Desenvolvi
-                        aplicações que priorizam eficiência e desempenho, criando uma base sólida para o desenvolvimento
-                        de</p>
-
-                </a>
+            <div class="card" data-project="C Documentation">
+                <h4>C Documentation <span><i class="ri-computer-line"></i></span></h4>
+                <p>"Sou proficiente em C, com foco em estruturas de dados e manipulação de arquivos. Desenvolvi aplicações que
+                    priorizam eficiência e desempenho, criando uma base sólida para o desenvolvimento de</p>
+                <a target="_blank" href="https://devdocs.io/c/">Ver Documentação <i class="ri-arrow-right-line"></i></a>
             </div>
-            <div class="card">
-                <a href="#">Projetos <span><i class="ri-money-dollar-box-line"></i></span><i
-                        class="ri-arrow-right-line"></i>
-                    <p>"Python é minha linguagem preferida para automação e análise de dados. Utilizo frameworks como
-                        Django
-                        e Flask, além de manipulação de dados com Pandas e NumPy, criando soluções ágeis."</p>
-                </a>
 
+                <div class="card" data-project="Projetos">
+                    <h4>Projetos <span><i class="ri-money-dollar-box-line"></i></span></h4>
+                    <p>"Python é minha linguagem preferida para automação e análise de dados. Utilizo frameworks como Django e Flask,
+                        além de manipulação de dados com Pandas e NumPy, criando soluções ágeis."</p>
+                    <a href="#">Ver Projetos <i class="ri-arrow-right-line"></i></a>
+                </div>
 
+                <div class="card" data-project="JavaScript">
+                    <h4>JavaScript <span><i class="ri-javascript-line"></i></span></h4>
+                    <p>"JavaScript é essencial para o desenvolvimento de interfaces dinâmicas. Tenho experiência em frameworks como
+                        React e Angular e estou sempre atualizado sobre as melhores práticas no ecossistema JavaScript."</p>
+                    <a target="_blank" href="https://devdocs.io/javascript/">Ver Documentação <i class="ri-arrow-right-line"></i></a>
+                </div>
 
-
-            </div>
-            <div class="card">
-                <a target="_blank" href="https://devdocs.io/javascript/">JavaScript <span><i
-                            class="ri-javascript-line"></i></span><i class="ri-arrow-right-line"></i>
-                    <p>"JavaScript é essencial para o desenvolvimento de interfaces dinâmicas. Tenho experiência em
-                        frameworks como React e Angular e estou sempre atualizado sobre as melhores práticas no
-                        ecossistema
-                        JavaScript."</p>
-                </a>
-
-
-
-            </div>
-            <div class="card">
-                <a target="_blank" href="https://github.com/micaiasviola">Meu GitHub <span><i
-                            class="ri-github-fill"></i></span><i class="ri-arrow-right-line"></i>
-                    <p>"Tenho experiência em MySQL, com foco em modelagem de dados, consultas SQL e otimização de banco
-                        de
-                        dados. Também desenvolvo procedimentos armazenados e estratégias de backup para garantir
-                        desempenho
-                        e segurança."</p>
-                </a>
-
-
-
-            </div>
+                <div class="card" data-project="Meu GitHub">
+                    <h4>Meu GitHub <span><i class="ri-github-fill"></i></span></h4>
+                    <p>"Tenho experiência em MySQL, com foco em modelagem de dados, consultas SQL e otimização de banco de dados. Também
+                        desenvolvo procedimentos armazenados e estratégias de backup para garantir desempenho e segurança."</p>
+                    <a target="_blank" href="https://github.com/micaiasviola">Visitar GitHub <i class="ri-arrow-right-line"></i></a>
+                </div>
 
     </section>
 
@@ -203,6 +184,17 @@
 
     <div class="copyright">
         Copyright © 2024 Micaías Viola, Full Stack Developer. All Rigths Reserved
+    </div>
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <img id="modal-image" src="" alt="Project Image">
+                <h3 id="modal-title"></h3>
+                <p id="modal-description"></p>
+                <a id="modal-link" href="#" target="_blank" class="btn">Ver Projeto</a>
+            </div>
+        </div>
     </div>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
